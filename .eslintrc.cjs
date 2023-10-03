@@ -4,6 +4,8 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
+    "airbnb",
+    "airbnb-typescript",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -12,8 +14,6 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
   },
-  rules: {
-    indent: "error",
-  },
+  rules: {},
   root: true,
 };
