@@ -119,6 +119,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 컨벤션 및 Linter
 
+### IDE 에서 eslint 설정 허용
+
+![img.png](.readme_images/img.png)
+
 - [typescript-eslint](https://typescript-eslint.io/getting-started)
 - prettier
 - git-hooks(husky and lint-staged)
