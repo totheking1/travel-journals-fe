@@ -1,4 +1,6 @@
 /* eslint-env node */
+// @ts-check
+/** @type {import('./packages/utils/src/ts-eslint/Linter').Linter.Config} */
 module.exports = {
   extends: [
     "eslint:recommended",
@@ -12,7 +14,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
+    project: ["./tsconfig.eslint.json"],
   },
   rules: {},
   root: true,
