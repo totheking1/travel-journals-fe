@@ -13,6 +13,15 @@ export default function Example() {
           홈으로
         </Button>
       </Grid>
+      <Grid xs={12} sm={12} md={12} xl={12}>
+        <Button variant="contained">Hello world</Button>
+      </Grid>
+      <Grid xs={12} sm={12} md={12} xl={12}>
+        <Button variant="contained">Hello world</Button>
+      </Grid>
+      <Grid xs={12} sm={12} md={12} xl={12}>
+        <Button variant="contained">Hello world</Button>
+      </Grid>
     </Grid>
   );
 }
