@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import Example from "./pages/example";
 import reportWebVitals from "./reportWebVitals";
+import SignIn from "./pages/signin";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         element: <Example />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <SignIn />,
   },
 ]);
 
@@ -31,5 +36,6 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 reportWebVitals();
