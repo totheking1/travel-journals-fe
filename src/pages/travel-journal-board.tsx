@@ -1,6 +1,7 @@
 import * as React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import {
+  Button,
   Paper,
   Table,
   TableBody,
@@ -101,6 +102,7 @@ export default function TravelJournalBoard() {
                       {column.label}
                     </TableCell>
                   ))}
+                  <TableCell align="center">지우기</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -123,6 +125,9 @@ export default function TravelJournalBoard() {
                           </TableCell>
                         );
                       })}
+                      <TableCell align="center" >
+                        <Button variant="outlined" color="error" sx={{marginLeft:"1px"}}>Del</Button>
+                      </TableCell>
                     </TableRow>
                   ))}
               </TableBody>
