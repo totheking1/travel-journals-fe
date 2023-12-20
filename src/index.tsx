@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
+import "./index.css";
 import App from "./App";
 import List from "./pages/travel-journal/list";
 import CreateTravelJournal from "./pages/travel-journal/create";
 import reportWebVitals from "./reportWebVitals";
 import SignIn from "./pages/signin";
-
-const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {

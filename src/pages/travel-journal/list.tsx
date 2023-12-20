@@ -3,6 +3,7 @@ import * as React from "react";
 import axios from "axios";
 import Grid from "@mui/material/Unstable_Grid2";
 import {
+  Button,
   Paper,
   Table,
   TableBody,
@@ -12,7 +13,7 @@ import {
   TablePagination,
   TableRow,
 } from "@mui/material";
-import { useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 import { useEffect } from "react";
 import Typography from "@mui/material/Typography";
 
@@ -117,6 +118,15 @@ export default function ListTravelJournal() {
                             </TableCell>
                           );
                         })}
+                        <TableCell align="center">
+                          <Button
+                            variant="outlined"
+                            color="error"
+                            sx={{ marginLeft: "1px" }}
+                          >
+                            Del
+                          </Button>
+                        </TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
