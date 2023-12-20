@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import {QueryClient, QueryClientProvider} from 'react-query'
 import App from "./App";
 import TravelJournalBoard from "./pages/travel-journal-board";
 import reportWebVitals from "./reportWebVitals";
 import SignIn from "./pages/signin";
+
+const queryClient= new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>,
 );
 
