@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import "./index.css";
-import {QueryClient, QueryClientProvider} from 'react-query'
 import App from "./App";
-import TravelJournalBoard from "./pages/travel-journal-board";
+import List from "./pages/travel-journal/list";
+import CreateTravelJournal from "./pages/travel-journal/create";
 import reportWebVitals from "./reportWebVitals";
 import SignIn from "./pages/signin";
-
-const queryClient= new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -17,7 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/board",
-        element: <TravelJournalBoard />,
+        element: <List />,
+      },
+      {
+        path: "/board/create",
+        element: <CreateTravelJournal />,
       },
     ],
   },
@@ -26,6 +29,8 @@ const router = createBrowserRouter([
     element: <SignIn />,
   },
 ]);
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,

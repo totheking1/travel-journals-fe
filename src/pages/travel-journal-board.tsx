@@ -125,8 +125,14 @@ export default function TravelJournalBoard() {
                           </TableCell>
                         );
                       })}
-                      <TableCell align="center" >
-                        <Button variant="outlined" color="error" sx={{marginLeft:"1px"}}>Del</Button>
+                      <TableCell align="center">
+                        <Button
+                          variant="outlined"
+                          color="error"
+                          sx={{ marginLeft: "1px" }}
+                        >
+                          Del
+                        </Button>
                       </TableCell>
                     </TableRow>
                   ))}
