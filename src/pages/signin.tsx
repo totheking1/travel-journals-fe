@@ -8,19 +8,21 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import { login } from "../services/auth";
 
 export default function SignIn() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const email = data.get("email") as string;
+    const password = data.get("password") as string;
+
+    login({ id: email, password })
+      .then(() => {})
+      .catch(() => {});
   };
 
   return (
-    // eslint-disable-next-line react/react-in-jsx-scope
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
