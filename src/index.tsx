@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import TravelJournalBoard from "./pages/travel-journal-board";
+import List from "./pages/travel-journal/list";
+import CreateTravelJournal from "./pages/travel-journal/create";
 import reportWebVitals from "./reportWebVitals";
 import SignIn from "./pages/signin";
 
@@ -14,7 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/board",
-        element: <TravelJournalBoard />,
+        element: <List />,
+      },
+      {
+        path: "/board/create",
+        element: <CreateTravelJournal />,
       },
     ],
   },
@@ -24,12 +30,16 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>,
 );
 
